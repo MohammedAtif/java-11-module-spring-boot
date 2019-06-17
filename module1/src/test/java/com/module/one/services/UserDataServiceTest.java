@@ -1,6 +1,7 @@
 package com.module.one.services;
 
 import com.module.one.models.UserData;
+import com.module.one.services.impl.UserServiceLocalImpl;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,6 +25,7 @@ public class UserDataServiceTest {
     @Test
     public void testInstance(){
         Assert.assertNotNull(userService);
+        Assert.assertTrue("Checking the instance type", userService instanceof UserServiceLocalImpl);
     }
 
     @Test
@@ -35,7 +37,7 @@ public class UserDataServiceTest {
     @Configuration
     @ComponentScan(basePackages = "com.module.one")
     @EntityScan(basePackages = "com.module.one.models")
-    @EnableJpaRepositories(basePackages = "com.module.one.UserDataRepository")
+    @EnableJpaRepositories(basePackages = "com.module.one.repositories")
     static class configuration{
 
     }

@@ -7,6 +7,9 @@ module com.module.main {
     requires com.module.one;
     requires spring.data.jpa;
     requires spring.webmvc;
+    requires com.module.two;
+
+    uses com.module.two.services.impl.ProjectDataServiceTwoImpl;
 
     exports com.module.main to spring.core, spring.beans, spring.context;
     exports com.module.main.controllers to spring.beans, spring.web, spring.core;

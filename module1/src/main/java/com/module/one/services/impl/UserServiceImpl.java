@@ -1,6 +1,6 @@
 package com.module.one.services.impl;
 
-import com.module.one.UserDataRepository.UserDataRepository;
+import com.module.one.repositories.UserDataRepository;
 import com.module.one.models.UserData;
 import com.module.one.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
